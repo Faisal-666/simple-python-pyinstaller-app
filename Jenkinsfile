@@ -8,8 +8,9 @@ node {
 		stash(name: 'compiled-results', includes: 'sources/*.py*')
 		echo 'Build done.'
 	    } catch (Exception e) {
-		echo "build failed: ${e.getMessage()}"
+		echo "build failed: ${e.getMessage()}" 
 		error "Stopp due to error build."
+	    }
 	}
-    }
+   }
 }
