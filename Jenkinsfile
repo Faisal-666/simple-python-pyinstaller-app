@@ -14,6 +14,7 @@ node {
 		}
 	stage ('Deliver') {
 		unstash 'compiled-results'
+		sh 'apk add --no-cache binutils'
 		sh 'pip install pyinstaller'
 		sh 'pyinstaller --onefile sources/add2vals.py'
 		post {
