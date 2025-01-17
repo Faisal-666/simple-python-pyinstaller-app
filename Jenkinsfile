@@ -17,12 +17,6 @@ node {
 		sh 'apk add --no-cache binutils'
 		sh 'pip install pyinstaller'
 		sh 'pyinstaller --onefile sources/add2vals.py'
-		post {
-			success {
-				archiveArtifacts 'dist/add2vals'
-			}
-		}
-		echo "Deliver stage complete."
 	    }
       }
 }
