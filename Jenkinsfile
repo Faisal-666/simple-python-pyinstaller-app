@@ -22,6 +22,7 @@ node {
 				archiveArtifacts 'dist/add2vals'
 			}
 		}
+		echo "Deliver stage complete."
 	    }
-	}
+      }
 }
