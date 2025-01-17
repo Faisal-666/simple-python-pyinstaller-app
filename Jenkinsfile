@@ -1,7 +1,6 @@
 node {
-    docker.image('python:2-alpine').inside{
+    docker.image('python:3.9-alpine').inside{
 	stage ('Build') {
-		sh 'usr/local/bin/python -m pip install --upgrade pip'
 		sh 'python -m py_compile sources/add2vals.py sources/calc.py'
 		stash(name: 'compiled-results', includes: 'sources/*.py*')
 		}
