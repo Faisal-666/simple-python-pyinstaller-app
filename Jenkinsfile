@@ -30,7 +30,6 @@ node {
             sh 'git config --global user.email "faisalakbar661@gmail.com"'
             sh 'git config --global user.name "Faisal"'
             sh 'git checkout --orphan gh-pages'
-	    sh 'https://github.com/Faisal-666/simple-python-pyinstaller-app.git'
 	    sh 'rm -rf .'
 	    sh 'echo "test" > README.md'
 	    sh 'git add README.MD'
