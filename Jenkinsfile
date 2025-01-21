@@ -4,8 +4,7 @@ node {
             checkout scm
         }
         stage('Setup') {
-            sh 'apk add --no-cache git nodejs npm'
-	    sh 'npm install -g gh-pages'
+            sh 'apk add --no-cache git'
         }
         stage('Build') {
             sh 'python -m py_compile sources/add2vals.py sources/calc.py'
