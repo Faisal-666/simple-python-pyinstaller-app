@@ -24,7 +24,7 @@ node {
             archiveArtifacts artifacts: 'dist/add2vals', allowEmptyArchive: true
         }
         stage('Manual Approval') {
-            input message: 'Lanjutkan ke tahap Deploy?'        
+            input message: 'Lanjutkan Ke Tahap Deploy?'        
         }
         stage('Deploy'){
             sh 'chmod +x ./scripts/gh-pages.sh && ./scripts/gh-pages.sh'
