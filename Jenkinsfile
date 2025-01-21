@@ -27,7 +27,7 @@ node {
             input message: 'Lanjutkan ke tahap Deploy?'        
         }
         stage('Deploy'){
-            sh './gh-pages.sh'
+            sh 'chmod +x ./gh-pages.sh'
             sleep time: 60, unit: 'SECONDS'
         }
     }
